@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_first_app/question.dart';
-import 'package:flutter_first_app/choice.dart';
 import 'package:flutter_first_app/appbar.dart';
+import 'package:flutter_first_app/quiz.dart';
+import 'done.dart';
 
 void main() => runApp(MyApp());
 
@@ -68,25 +68,8 @@ class _MyAppState extends State<MyApp> {
         ),
 
         body: _questionIndex < question.length - 1
-            ? Column(
-                children: [
-                  Question(question[_questionIndex]['q']),
-                  Choice(question[_questionIndex]['c1'], answerQuestion),
-                  Choice(question[_questionIndex]['c2'], answerQuestion),
-                  Choice(question[_questionIndex]['c3'], answerQuestion),
-                  Choice('RESET', resetQuestionIndex),
-                ],
-              )
-            : Column(children: [
-                Text(
-                  'you are done!',
-                  style: TextStyle(
-                    fontSize: 28,
-                    color: Color.fromRGBO(10, 20, 30, 80),
-                  ),
-                ),
-                Choice('RESET', resetQuestionIndex),
-              ]),
+            ? Quiz(question, _questionIndex, answerQuestion)
+            : Done(resetQuestionIndex),
       ),
     );
   }
