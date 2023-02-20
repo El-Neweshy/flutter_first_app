@@ -57,14 +57,22 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         // appBar: MyAppBar(),
         appBar: AppBar(
-          title: const Text('My Questions App'),
-          leading: Icon(Icons.account_circle_rounded),
+          title: const Text(
+            'My Questions App',
+            style: TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          leading: Icon(
+            Icons.account_circle_rounded,
+          ),
           leadingWidth: 100,
           actions: [
             Icon(Icons.more_vert),
           ],
           elevation: 20,
-          backgroundColor: Color.fromARGB(48, 184, 43, 55),
+          backgroundColor: Color.fromARGB(47, 126, 20, 29),
         ),
 
         body: _questionIndex < question.length - 1

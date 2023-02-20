@@ -5,6 +5,12 @@ class Done extends StatelessWidget {
   final Function action;
   Done(this.action);
 
+  String get resultPhrase {
+    String resultText = 'You did it!';
+
+    return resultText;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -12,10 +18,11 @@ class Done extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(
-            'you are done!',
+            resultPhrase,
             style: TextStyle(
               fontSize: 50,
-              color: Color.fromARGB(175, 5, 156, 12),
+              color: Color.fromARGB(174, 228, 93, 176),
+              fontWeight: FontWeight.bold,
             ),
           ),
           SizedBox(height: 50),
