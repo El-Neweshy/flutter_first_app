@@ -18,14 +18,13 @@ class Choice extends StatelessWidget {
           ),
         ),
         onPressed: onPressed,
-        if (1==1) {
         style: ButtonStyle(
             backgroundColor:
                 MaterialStateProperty.all(Color.fromRGBO(50, 20, 0, 50)),
             foregroundColor: MaterialStateProperty.all(Colors.white),
             padding: MaterialStateProperty.all(EdgeInsets.all(15)),
             // shape:MaterialStateProperty.all(),
-            minimumSize: MaterialStateProperty.all(Size(10, 20)))}else{},
+            minimumSize: MaterialStateProperty.all(Size(10, 20))),
       ),
       padding: EdgeInsets.all(2),
     );
